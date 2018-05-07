@@ -30,4 +30,8 @@ public abstract class Kaiju implements Roarable, Damageable {
         this.healthValue -= amount;
     }
 
+    public void attack(Damageable enemy) {
+        enemy.takeDamage(attackValue);
+    }
+
 }

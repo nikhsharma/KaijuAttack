@@ -1,16 +1,19 @@
 import kaijus.LandLizard;
 import org.junit.Before;
 import org.junit.Test;
+import vehicles.Tank;
 
 import static org.junit.Assert.assertEquals;
 
 public class LandLizardTest {
 
     LandLizard landLizard;
+    Tank tank;
 
     @Before
     public void before() {
         landLizard = new LandLizard("Godzilla", 100, 20);
+        tank = new Tank("Boom", 100, 20);
     }
 
     @Test
@@ -36,6 +39,13 @@ public class LandLizardTest {
     @Test
     public void canTakeDamage() {
         landLizard.takeDamage(20);
-        assertEquals(80, landLizard.getHealthValue() );
+        assertEquals(80, landLizard.getHealthValue());
     }
+
+    @Test
+    public void canAttackEnemy() {
+        landLizard.attack(tank);
+        assertEquals(80, tank.getHealthValue());
+    }
+
 }

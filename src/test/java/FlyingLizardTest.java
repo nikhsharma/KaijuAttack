@@ -27,4 +27,9 @@ public class FlyingLizardTest {
     public void hasAttackValue() {
         assertEquals(20, flyingLizard.getAttackValue());
     }
+
+    @Test
+    public void canRoar() {
+        assertEquals("SCREEECH!!!", flyingLizard.roar());
+    }
 }

@@ -21,4 +21,8 @@ public abstract class Kaiju {
         return attackValue;
     }
 
+    public String roar() {
+        return "ROOAARRR!!!";
+    }
+
 }

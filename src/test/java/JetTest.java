@@ -1,3 +1,4 @@
+import kaijus.FlyingLizard;
 import org.junit.Before;
 import org.junit.Test;
 import vehicles.Jet;
@@ -7,10 +8,12 @@ import static org.junit.Assert.assertEquals;
 public class JetTest {
 
     Jet jet;
+    FlyingLizard flyingLizard;
 
     @Before
     public void before() {
         jet = new Jet("Harrier", 100, 20);
+        flyingLizard = new FlyingLizard("Varan", 100, 20);
     }
 
     @Test
@@ -32,5 +35,11 @@ public class JetTest {
     public void canTakeDamage() {
         jet.takeDamage(20);
         assertEquals(80, jet.getHealthValue());
+    }
+
+    @Test
+    public void canAttackEnemy() {
+        jet.attack(flyingLizard);
+        assertEquals(80, flyingLizard.getHealthValue());
     }
 }

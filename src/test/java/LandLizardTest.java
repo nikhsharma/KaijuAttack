@@ -32,4 +32,10 @@ public class LandLizardTest {
     public void canRoar() {
         assertEquals("ROOOAAARRRR!!!", landLizard.roar());
     }
+
+    @Test
+    public void canTakeDamage() {
+        landLizard.takeDamage(20);
+        assertEquals(80, landLizard.getHealthValue() );
+    }
 }

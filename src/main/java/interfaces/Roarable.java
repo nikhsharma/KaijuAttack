@@ -1,4 +1,4 @@
-package kaijus;
+package interfaces;
 
 public interface Roarable {
 

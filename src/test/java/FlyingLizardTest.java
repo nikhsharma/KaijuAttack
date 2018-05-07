@@ -32,4 +32,10 @@ public class FlyingLizardTest {
     public void canRoar() {
         assertEquals("SCREEECH!!!", flyingLizard.roar());
     }
+
+    @Test
+    public void canTakeDamage() {
+        flyingLizard.takeDamage(20);
+        assertEquals(80, flyingLizard.getHealthValue());
+    }
 }

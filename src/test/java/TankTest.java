@@ -27,4 +27,10 @@ public class TankTest {
     public void hasAttackValue() {
         assertEquals(20, tank.getAttackValue());
     }
+
+    @Test
+    public void canTakeDamage() {
+        tank.takeDamage(20);
+        assertEquals(80, tank.getHealthValue());
+    }
 }

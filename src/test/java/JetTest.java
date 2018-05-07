@@ -28,4 +28,9 @@ public class JetTest {
         assertEquals(20, jet.getAttackValue());
     }
 
+    @Test
+    public void canTakeDamage() {
+        jet.takeDamage(20);
+        assertEquals(80, jet.getHealthValue());
+    }
 }

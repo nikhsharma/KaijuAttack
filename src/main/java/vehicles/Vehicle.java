@@ -1,6 +1,8 @@
 package vehicles;
 
-public abstract class Vehicle {
+import interfaces.Damageable;
+
+public abstract class Vehicle implements Damageable {
 
     private String type;
     private int healthValue;
@@ -22,5 +24,9 @@ public abstract class Vehicle {
 
     public int getAttackValue() {
         return attackValue;
+    }
+
+    public void takeDamage(int amount) {
+        this.healthValue -= amount;
     }
 }

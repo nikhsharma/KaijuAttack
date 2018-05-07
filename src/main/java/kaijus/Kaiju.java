@@ -1,9 +1,10 @@
 package kaijus;
 
 import interfaces.Damageable;
+import interfaces.Moveable;
 import interfaces.Roarable;
 
-public abstract class Kaiju implements Roarable, Damageable {
+public abstract class Kaiju implements Roarable, Damageable, Moveable {
     private String name;
     private int healthValue;
     private int attackValue;

@@ -47,4 +47,9 @@ public class FlyingLizardTest {
         flyingLizard.attack(jet);
         assertEquals(80, jet.getHealthValue());
     }
+
+    @Test
+    public void canFly() {
+        assertEquals("WHOOSH!", flyingLizard.move());
+    }
 }

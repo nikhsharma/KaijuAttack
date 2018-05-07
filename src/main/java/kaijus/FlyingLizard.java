@@ -9,4 +9,8 @@ public class FlyingLizard extends Kaiju {
     public String roar() {
         return "SCREEECH!!!";
     }
+
+    public String move() {
+        return "WHOOSH!";
+    }
 }

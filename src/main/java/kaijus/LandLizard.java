@@ -9,4 +9,8 @@ public class LandLizard extends Kaiju {
     public String roar() {
         return "ROOOAAARRRR!!!";
     }
+
+    public String move() {
+        return "STOMP STOMP!!";
+    }
 }

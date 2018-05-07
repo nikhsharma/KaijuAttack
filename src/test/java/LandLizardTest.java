@@ -48,4 +48,9 @@ public class LandLizardTest {
         assertEquals(80, tank.getHealthValue());
     }
 
+    @Test
+    public void canMove() {
+        assertEquals("STOMP STOMP!!", landLizard.move());
+    }
+
 }

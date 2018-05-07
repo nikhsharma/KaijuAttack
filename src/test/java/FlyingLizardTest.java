@@ -52,4 +52,10 @@ public class FlyingLizardTest {
     public void canFly() {
         assertEquals("WHOOSH!", flyingLizard.move());
     }
+
+    @Test
+    public void hasLightAttack() {
+        flyingLizard.lightAttack(jet);
+        assertEquals(90, jet.getHealthValue());
+    }
 }

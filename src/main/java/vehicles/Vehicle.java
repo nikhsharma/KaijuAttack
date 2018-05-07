@@ -3,7 +3,7 @@ package vehicles;
 import interfaces.Attackable;
 import interfaces.Damageable;
 
-public abstract class Vehicle implements Damageable, Attackable {
+public abstract class Vehicle implements Damageable {
 
     private String type;
     private int healthValue;

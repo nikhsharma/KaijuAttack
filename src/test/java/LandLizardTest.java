@@ -53,4 +53,10 @@ public class LandLizardTest {
         assertEquals("STOMP STOMP!!", landLizard.move());
     }
 
+    @Test
+    public void hasLightAttack() {
+        landLizard.lightAttack(tank);
+        assertEquals(90, tank.getHealthValue());
+    }
+
 }

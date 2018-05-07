@@ -1,10 +1,11 @@
 package kaijus;
 
+import interfaces.Attackable;
 import interfaces.Damageable;
 import interfaces.Moveable;
 import interfaces.Roarable;
 
-public abstract class Kaiju implements Roarable, Damageable, Moveable {
+public abstract class Kaiju implements Roarable, Damageable, Moveable, Attackable {
     private String name;
     private int healthValue;
     private int attackValue;
@@ -33,6 +34,10 @@ public abstract class Kaiju implements Roarable, Damageable, Moveable {
 
     public void attack(Damageable enemy) {
         enemy.takeDamage(attackValue);
+    }
+
+    public void lightAttack(Damageable enemy) {
+        enemy.takeDamage(attackValue/2);
     }
 
 }

@@ -42,4 +42,10 @@ public class TankTest {
         tank.attack(landLizard);
         assertEquals(80, landLizard.getHealthValue());
     }
+
+    @Test
+    public void hasLightAttack() {
+        tank.lightAttack(landLizard);
+        assertEquals(90, landLizard.getHealthValue());
+    }
 }
